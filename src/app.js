@@ -38,7 +38,8 @@ async function getcountries() {
   //pour voir les données
   console.log(countryArray);
 }
-
+//tri dans l'order alphabétique
+//sortedCountires();
 
 */
 
@@ -92,3 +93,11 @@ async function getcountries() {
   });
 }
 getcountries();
+
+//fonction qui trie les pays par ordre alphabétique (ne fonctionne actuellement)
+function sortCountries() {
+  const sortedCountries = countries.sort((a, b) =>
+    a.name.common > b.name.common ? 1 : -1
+  );
+  console.log(sortedCountries);
+}
